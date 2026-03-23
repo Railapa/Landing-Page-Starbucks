@@ -19,7 +19,7 @@
     --color-secondary-4: #f5c518;
 }
 
-a.btn{
+a.btn {
     text-decoration: none;
     background-size: contain;
 }
@@ -31,13 +31,34 @@ a.btn{
     font-family: 'Poppins', sans-serif;
 }
 
-#container{
+#container {
     background-image: url(../imgs/background-mobile.png);
+    background-size: contain;
+    height: 400vh;
+}
+
+.title{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--color-neutral-8);
+    font-weight: 700;
+    position: relative;
+
+    &::before{
+        content: '';
+        display: block;
+        width: 60px;
+        height: 4px;
+        background-color: var(--color-primary-1);
+        position: absolute;
+        bottom: 0;
+        border-radius: 30px;
+    }
 }
 
 /* BOTOES */
 
-.btn{
+.btn {
     padding: 10px 20px;
     border: none;
     border-radius: 8px;
@@ -48,17 +69,28 @@ a.btn{
     transition: background-color 0.4s ease;
 }
 
-.btn_mobile{
+.btn_mobile {
     font-size: 1.5rem;
 }
 
-.btn_default{
+.btn_default {
     background-color: var(--color-primary-1);
     color: var(--color-neutral-0);
 }
 
-.btn_default:hover{
+.btn_default:hover {
     background-color: var(--color-primary-2);
+}
+
+.btn_outlined {
+    background-color: transparent;
+    color: var(--color-primary-1);
+    border: 2px solid var(--color-primary-1);
+
+    &:hover{
+        background-color: var(--color-primary-1);
+        color: var(--color-neutral-0);
+    }
 }
 
 /* HEADER */
@@ -75,13 +107,17 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    .btn_default {
+        display: none;
+    }
 }
 
 .logo {
     width: 180px;
 }
 
-ul{
+ul {
     display: none;
     list-style: none;
     flex-direction: column;
@@ -92,21 +128,22 @@ ul{
     background-color: var(--color-neutral-1);
     left: 0;
     padding: 1rem;
-    &.show{
+
+    &.show {
         display: flex;
     }
 
     li {
         text-align: center;
 
-        a{
+        a {
             color: var(--color-neutral-8);
             text-decoration: none;
             font-size: 1rem;
             font-weight: 500;
             transition: all 0.3s ease;
 
-            &:hover{
+            &:hover {
                 color: var(--color-primary-1);
                 border-bottom: 1px solid var(--color-primary-1);
             }
@@ -114,18 +151,14 @@ ul{
     }
 }
 
-.btn_default{
-    display: none;
-}
-
-@media (min-width: 769px){
-    header{
-        .navbar{
-            .btn_mobile{
+@media (min-width: 769px) {
+    header {
+        .navbar {
+            .btn_mobile {
                 display: none;
             }
 
-            ul{
+            ul {
                 display: flex;
                 flex-direction: row;
                 position: static;
@@ -134,7 +167,7 @@ ul{
                 padding: 0;
             }
 
-            .btn_default{
+            .btn_default {
                 display: block;
             }
         }
@@ -143,19 +176,16 @@ ul{
 
 /* MAIN */
 
-#home{
+#home {
     display: flex;
     flex-direction: column;
     gap: 12px;
     align-items: center;
     min-height: calc(100vh - 96px);
+    padding: 32px 4%;
     padding-top: clamp(0px, 5vw, 32px);
 
-    .home-image{
-        width: clamp(300px, 50%, 400px);
-    }
-
-    .home-title{
+    .home-title {
         color: var(--color-neutral-8);
         text-align: center;
         font-size: clamp(3rem, 5vw, 4.3rem);
@@ -164,11 +194,11 @@ ul{
         max-width: 700px;
     }
 
-    span{
+    span {
         color: var(--color-primary-1);
     }
 
-    .home-description{
+    .home-description {
         color: var(--color-neutral-9);
         text-align: center;
         font-size: 1rem;
@@ -176,9 +206,22 @@ ul{
         max-width: 600px;
     }
 
-    .home-actions{
+    .home_actions {
         display: flex;
         gap: 12px;
         margin-top: 12px;
     }
+
+    .home-img {
+        width: clamp(300px, 50%, 400px);
+    }
+}
+
+#trending{
+    padding: 32px 4%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    min-height: calc(100vh - 96px);
 }
