@@ -14,7 +14,10 @@
 <body>
     <header id="header">
         <nav class="navbar" id="navbar">
-            <img src="./imgs/logo-starbucks.png" alt="Logo Starbucks" class="logo" id="logo">
+            <a href="#home">
+                <img src="./imgs/logo-starbucks.png" alt="Logo Starbucks" class="logo" id="logo">
+            </a>
+
 
 
             <button class="btn btn_mobile" id="btn_mobile">
@@ -28,7 +31,7 @@
                 <li><a href="#products">Novidades</a></li>
             </ul>
 
-            <a href="" class="btn btn_default" id="btn_default">Contatar</a>
+            <a href="https://wa.me/telefone" target="_blank" class="btn btn_default" id="btn_default">Contatar</a>
         </nav>
     </header>
 
@@ -46,11 +49,11 @@
             </p>
 
             <div class="home_actions">
-                <a href="#" class="btn btn_default">
+                <a href="#about" class="btn btn_default">
                     Conhecer
                 </a>
 
-                <a href="#" class="btn btn_outlined">
+                <a href="https://wa.me/telefone" target="_blank" class="btn btn_outlined">
                     Contatar
                 </a>
             </div>
@@ -153,7 +156,7 @@
             </h2>
 
             <div class="products-cards">
-                <div class="product-card">
+                <div class="product-card" data-product="Moccha Chocolate">
                     <img src="./imgs/1.png" alt="">
 
                     <div class="product-content">
@@ -164,18 +167,18 @@
                     </div>
                 </div>
 
-                <div class="product-card">
+                <div class="product-card" data-product="Moccha Morango">
                     <img src="./imgs/2.png" alt="">
 
                     <div class="product-content">
                         <h3>
                             Moccha
-                            <span>Morange</span>
+                            <span>Morango</span>
                         </h3>
                     </div>
                 </div>
 
-                <div class="product-card">
+                <div class="product-card" data-product="Moccha Café">
                     <img src="./imgs/3.png" alt="">
 
                     <div class="product-content">
@@ -186,7 +189,7 @@
                     </div>
                 </div>
 
-                <div class="product-card">
+                <div class="product-card" data-product="Moccha Manga">
                     <img src="./imgs/4.png" alt="">
 
                     <div class="product-content">
